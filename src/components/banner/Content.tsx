@@ -3,13 +3,13 @@ import React from "react";
 
 const Content = () => {
   return (
-    <div className="flex flex-col justify-center sm:items-start items-center sm:justify-start gap-3">
+    <div className="flex flex-col items-center justify-center gap-3 sm:items-start sm:justify-start">
       <p className="text-gray-100 ">
         Hello,<span className="text-emerald-700 ">I&apos;m</span>
       </p>
-      <h1 className="text-5xl font-medium text-emerald-400">Masoud Motahari</h1>
+      <h1 className="text-3xl sm:text-5xl font-medium text-[#00BC96]">Masoud Motahari</h1>
       <p className="text-lg font-medium text-gray-100">Front End Developer </p>
-      <p className="mt-4 w-6/12 text-justify text-gray-300">
+      <p className="mt-4 w-6/12 text-justify text-gray-300 hidden sm:block ">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eos
         suscipit quos doloremque atque sapiente ipsa, repellat at pariatur
         culpa, eum magnam
@@ -22,13 +22,13 @@ const Content = () => {
       {/* social icons */}
       <div className="mt-4 flex items-center gap-2">
         <p className="mr-3 font-medium text-gray-100 ">Check Out My </p>
-        <div className="hexagonal mr-2  bg-green-800 p-1">
+        <div className="hexagonal mr-2  bg-green-800 p-2">
           <Instagram sx={{ color: "#dadada" }} />
         </div>
-        <div className="hexagonal mr-2  bg-green-800 p-1">
+        <div className="hexagonal mr-2  bg-green-800 p-2">
           <LinkedIn sx={{ color: "#dadada" }} />
         </div>
-        <div className="hexagonal mr-2  bg-green-800 p-1">
+        <div className="hexagonal mr-2  bg-green-800 p-2">
           <GitHub sx={{ color: "#dadada" }} />
         </div>
       </div>
