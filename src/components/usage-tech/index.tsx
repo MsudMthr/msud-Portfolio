@@ -3,7 +3,7 @@ import UsageCards from "./UsageCards";
 
 const UsageTechnology = () => {
   return (
-    <section className="bg-[#171C22] py-20">
+    <section className="bg-[#171C22] py-10">
       <div className="mx-auto max-w-screen-lg flex flex-col items-center sm:items-start px-3">
         <p className="font-medium text-[#DFE3EC]">
           My <span className="text-emerald-800">Platforms</span>
