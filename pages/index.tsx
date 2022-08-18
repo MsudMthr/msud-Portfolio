@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Projects from "src/components/projects";
+import Technologies from "src/components/technologies";
 import Banner from "../src/components/banner";
-import UsageTechnology from "../src/components/usage-tech";
+import Platforms from "../src/components/usage-tech";
 import Layout from "../src/container";
 
 const Home: NextPage = () => {
@@ -9,8 +10,9 @@ const Home: NextPage = () => {
     <Layout>
       <>
         <Banner />
-        <UsageTechnology />
+        <Platforms />
         <Projects />
+        <Technologies />
       </>
     </Layout>
   );
