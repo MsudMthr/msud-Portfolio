@@ -13,6 +13,7 @@ import redux from "../src/assets/redux-svgrepo-com.svg";
 import sass from "../src/assets/sass-svgrepo-com.svg";
 import styledComponents from "../src/assets/styled-svgrepo-com.svg";
 import fireBase from "../src/assets/firebase-svgrepo-com.svg";
+import jest from "../src/assets/jest-svgrepo-com.svg";
 
 export const techImage = [
   { url: git, name: "git" },
@@ -30,4 +31,5 @@ export const techImage = [
   { url: ts, name: "typeScript" },
   { url: styledComponents, name: "Styled Components" },
   { url: fireBase, name: "FireBase" },
+  { url: jest, name: "Jest" },
 ];

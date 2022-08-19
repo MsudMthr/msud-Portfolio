@@ -40,25 +40,25 @@ export default function ProjectSlider() {
         className="my-5 flex w-full flex-col items-center"
       >
         <>
-          <SwiperSlide className="flex w-12 justify-center">
+          <SwiperSlide className="flex w-12 justify-center overflow-hidden rounded-md">
             <Image alt="" width={700} height={500} src={blogImage} />
           </SwiperSlide>
-          <SwiperSlide className="flex w-12 justify-center">
+          <SwiperSlide className="flex w-12 justify-center overflow-hidden rounded-md">
             <Image alt="" width={700} height={500} src={store} />
           </SwiperSlide>
-          <SwiperSlide className="flex w-12 justify-center">
+          <SwiperSlide className="flex w-12 justify-center overflow-hidden rounded-md">
             <Image alt="" width={700} height={500} src={exchange} />
           </SwiperSlide>
-          <SwiperSlide className="flex w-12 justify-center">
+          <SwiperSlide className="flex w-12 justify-center overflow-hidden rounded-md">
             <Image alt="" width={700} height={500} src={musicPlayer} />
           </SwiperSlide>
-          <SwiperSlide className="flex w-12 justify-center">
+          <SwiperSlide className="flex w-12 justify-center overflow-hidden rounded-md">
             <Image alt="" width={700} height={500} src={admin} />
           </SwiperSlide>
-          <SwiperSlide className="flex w-12 justify-center">
+          <SwiperSlide className="flex w-12 justify-center overflow-hidden rounded-md">
             <Image alt="" width={700} height={500} src={weather} />
           </SwiperSlide>
-          <SwiperSlide className="flex w-12 justify-center">
+          <SwiperSlide className="flex w-12 justify-center overflow-hidden rounded-md">
             <Image alt="" width={700} height={500} src={tailwindTrain} />
           </SwiperSlide>
         </>

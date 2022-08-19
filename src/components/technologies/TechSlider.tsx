@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { techImage } from "data/technologies";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
@@ -7,8 +7,6 @@ import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import { Autoplay } from "swiper";
 
 const TechSlider = () => {
-  console.log(techImage);
-
   return (
     <>
       <Swiper
@@ -20,11 +18,15 @@ const TechSlider = () => {
           delay: 1000,
           disableOnInteraction: false,
         }}
+        speed={1000}
         className="mx-auto my-10 max-w-screen-lg"
       >
-        {techImage.map((image) => (
-          <SwiperSlide key={image.name}>
-            <Image src={image.url} alt="ss" width={80} height={80} />
+        {techImage.map((technology) => (
+          <SwiperSlide
+            key={technology.name}
+            className="relative flex flex-col items-center"
+          >
+            <Image src={technology.url} alt="ss" width={80} height={80} />
           </SwiperSlide>
         ))}
 
