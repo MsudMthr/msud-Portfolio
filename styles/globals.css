@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+::-moz-selection {
+  background: rgba(132, 177, 17, 0.432);
+}
+::selection {
+  background: rgba(132, 177, 17, 0.432);
+}
+
+button::selection {
+  background-color: rgba(255, 171, 2, 0.637);
+}
+
 .hexagonal {
   -webkit-clip-path: polygon(
     50% 0%,
@@ -15,6 +26,5 @@
 }
 
 .border-radius-fancy {
-  border-radius: 66% 34% 86% 14% / 84% 40% 60% 16%  ;
-  
+  border-radius: 66% 34% 86% 14% / 84% 40% 60% 16%;
 }
