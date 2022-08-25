@@ -7,7 +7,7 @@ import type { Project } from "src/interfaces/interface";
 import Canvas from "src/components/Canvas";
 import ProjectsNavbar from "src/components/ProjectsNavbar";
 import { ApolloQueryResult } from "@apollo/client";
-interface Projects {
+export interface Projects {
   projects: Project[];
 }
 const Projects = ({ projects }: Projects) => {
@@ -17,7 +17,7 @@ const Projects = ({ projects }: Projects) => {
     <div>
       <Grid container>
         <Grid item xs={3} className="relative z-50 min-h-screen  ">
-          <ProjectsNavbar />
+          <ProjectsNavbar projects={projects} />
         </Grid>
         <Grid item xs={9} className="z-50 bg-orange-300/50">
           <h1>this is content</h1>
