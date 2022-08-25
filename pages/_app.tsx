@@ -2,8 +2,8 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
-const client = new ApolloClient({
-  uri: "",
+export const client = new ApolloClient({
+  uri: "https://api-ap-southeast-2.hygraph.com/v2/cl77evxzn10fc01un3yeah517/master",
   cache: new InMemoryCache(),
 });
 

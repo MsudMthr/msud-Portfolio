@@ -1,8 +1,8 @@
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
-import { ReactNode, useCallback } from "react";
+import { useCallback } from "react";
 
-const Canvas = ({ children }: JSX.Element) => {
+const Canvas = () => {
   const particlesInit = useCallback(async (engine: any) => {
     console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -20,10 +20,11 @@ const Canvas = ({ children }: JSX.Element) => {
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
+      className={"z-0"}
       options={{
         background: {
           color: {
-            value: "#0d4e30",
+            value: "#212b26",
           },
         },
         fpsLimit: 80,
@@ -41,7 +42,7 @@ const Canvas = ({ children }: JSX.Element) => {
           },
           modes: {
             push: {
-              quantity: 4,
+              quantity: 2,
             },
             repulse: {
               distance: 200,
@@ -51,14 +52,14 @@ const Canvas = ({ children }: JSX.Element) => {
         },
         particles: {
           color: {
-            value: "#c11b21",
+            value: "#85eb00",
           },
           links: {
-            color: "#0c9220",
+            color: "#d7d7d7",
             distance: 150,
             enable: true,
             opacity: 0.5,
-            width: 1,
+            width: 0.5,
           },
           collisions: {
             enable: true,
@@ -68,6 +69,7 @@ const Canvas = ({ children }: JSX.Element) => {
             outModes: {
               default: "bounce",
             },
+            angle: 5,
             random: false,
             speed: 3,
             straight: false,
@@ -75,7 +77,7 @@ const Canvas = ({ children }: JSX.Element) => {
           number: {
             density: {
               enable: true,
-              area: 800,
+              area: 500,
             },
             value: 80,
           },
@@ -86,14 +88,12 @@ const Canvas = ({ children }: JSX.Element) => {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 1, max: 3 },
           },
         },
         detectRetina: true,
       }}
-    >
-      ssss
-    </Particles>
+    />
   );
 };
 
