@@ -7,23 +7,28 @@ import type { Project } from "src/interfaces/interface";
 import Canvas from "src/components/Canvas";
 import ProjectsNavbar from "src/components/ProjectsNavbar";
 import { ApolloQueryResult } from "@apollo/client";
+import { useState } from "react";
 export interface Projects {
   projects: Project[];
 }
 const Projects = ({ projects }: Projects) => {
-  console.log(projects);
+  const [isNavbarResponsive, setIsNavbarResponsive] = useState<Boolean>(false);
 
   return (
     <div>
       <Grid container>
-        <Grid item xs={3} className="relative z-50 min-h-screen  ">
-          <ProjectsNavbar projects={projects} />
+        <Grid item xs={3} className="relative z-50 min-h-screen   ">
+          <ProjectsNavbar
+            projects={projects}
+            setIsNavbarResponsive={setIsNavbarResponsive}
+            isNavbarResponsive={isNavbarResponsive}
+          />
         </Grid>
-        <Grid item xs={9} className="z-50 bg-orange-300/50">
+        <Grid item xs={9} className="z-50">
           <h1>this is content</h1>
         </Grid>
       </Grid>
-      <Canvas />
+      {/* <Canvas /> */}
     </div>
   );
 };

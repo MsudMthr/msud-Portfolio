@@ -5,4 +5,7 @@ export interface Project {
   features: string[];
   technologies: string[];
   slug: string;
+  cover: {
+    url: string;
+  };
 }

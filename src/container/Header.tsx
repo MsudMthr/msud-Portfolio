@@ -16,17 +16,19 @@ const Header = () => {
           <ul className="flex items-center gap-5 text-gray-200 md:gap-20">
             <li>
               <Link href="#">
-                <a className="font-medium text-emerald-400">Home</a>
+                <a className="font-medium text-emerald-400 hover:text-emerald-700">
+                  Home
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/projects">
+                <a className="font-medium hover:text-emerald-700">Projects</a>
               </Link>
             </li>
             <li>
               <Link href="#">
-                <a className="font-medium">Projects</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <a className="font-medium">Resume</a>
+                <a className="font-medium hover:text-emerald-700">Resume</a>
               </Link>
             </li>
           </ul>
