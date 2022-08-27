@@ -28,3 +28,11 @@ button::selection {
 .border-radius-fancy {
   border-radius: 66% 34% 86% 14% / 84% 40% 60% 16%;
 }
+
+.html-text p {
+  /* @apply; */
+}
+
+.html-text a {
+  @apply text-cyan-600 underline font-bold  ;
+}
