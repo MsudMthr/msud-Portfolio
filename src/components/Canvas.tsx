@@ -24,7 +24,7 @@ const Canvas = () => {
       options={{
         background: {
           color: {
-            value: "#212b26",
+            value: "#171C22",
           },
         },
         fpsLimit: 80,
@@ -52,7 +52,7 @@ const Canvas = () => {
         },
         particles: {
           color: {
-            value: "#85eb00",
+            value: "#171717",
           },
           links: {
             color: "#d7d7d7",

@@ -30,9 +30,11 @@ button::selection {
 }
 
 .html-text p {
-  /* @apply; */
+  @apply max-w-sm text-sm leading-6 text-gray-100;
 }
 
 .html-text a {
-  @apply text-cyan-600 underline font-bold  ;
+  @apply font-bold text-cyan-600 underline;
 }
+
+

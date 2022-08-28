@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { client } from "pages/_app";
 import React, { useState } from "react";
+import Canvas from "src/components/Canvas";
 import ProjectDetail from "src/components/ProjectDetail";
 import ProjectsNavbar from "src/components/ProjectsNavbar";
 import { GET_ALL_PROJECTS, GET_PROJECT_INFO } from "src/graphQl/queries";
@@ -24,6 +25,7 @@ const Project = ({ projects, project }: ProjectProps) => {
   const [isNavbarResponsive, setIsNavbarResponsive] = useState<Boolean>(false);
   return (
     <Grid container>
+      <Canvas />
       <Grid
         item
         //todo responsive navbar
