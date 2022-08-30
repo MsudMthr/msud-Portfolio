@@ -12,15 +12,17 @@ const ProjectDataTabs = ({ feature, technologies }: ProjectDataTabsProps) => {
       <div className="flex justify-around px-3 py-3 text-gray-200">
         <button
           onClick={() => setTab("technologies")}
-          className={`rounded-md px-2 py-1  md:px-4 md:py-2 text-lg font-medium  transition-all duration-200 hover:bg-black/30 hover:text-teal-200 ${
-            tab === "technologies" ? "bg-white/70 text-gray-900" : "bg-neutral-900"
+          className={`rounded-md px-2 py-1  text-lg font-medium transition-all duration-200  hover:bg-black/30 hover:text-teal-200 md:px-4 md:py-2 ${
+            tab === "technologies"
+              ? "bg-white/70 text-gray-900"
+              : "bg-neutral-900"
           }`}
         >
           Technologies
         </button>
         <button
           onClick={() => setTab("feature")}
-          className={`rounded-md px-2 py-1  md:px-4 md:py-2 text-lg font-medium  transition-all duration-200 hover:bg-black/30 hover:text-teal-200 ${
+          className={`rounded-md px-2 py-1  text-lg font-medium transition-all duration-200  hover:bg-black/30 hover:text-teal-200 md:px-4 md:py-2 ${
             tab === "feature" ? "bg-white/70 text-gray-900" : "bg-neutral-900"
           }`}
         >

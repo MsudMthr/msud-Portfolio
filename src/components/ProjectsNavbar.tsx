@@ -18,7 +18,11 @@ const ProjectsNavbar = ({
   isNavbarResponsive,
 }: ProjectsNavbarProps) => {
   return (
-    <div className=" z-50 flex min-h-screen w-full flex-col items-center bg-[#171C22]/90">
+    <div
+      className={`absolute top-0 transition-all duration-300  z-50 flex min-h-screen w-full flex-col items-center bg-[#171C22]/90 ${
+        isNavbarResponsive ? " -left-[300%]" : "left-0"
+      }`}
+    >
       <Image src={logo} alt={"masoud motahari"} width={200} height={200} />
       <div className="flex w-11/12 flex-col gap-2">
         {projects.map((project) => (
@@ -28,9 +32,7 @@ const ProjectsNavbar = ({
             </a>
           </Link>
         ))}
-        <button
-          onClick={() => setIsNavbarResponsive(!isNavbarResponsive)}
-        >{`>`}</button>
+       
       </div>
     </div>
   );

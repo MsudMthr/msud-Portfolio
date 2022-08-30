@@ -1,3 +1,4 @@
+import { CloseRounded, OpenWith } from "@mui/icons-material";
 import { Grid } from "@mui/material";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { client } from "pages/_app";
@@ -25,11 +26,11 @@ const Project = ({ projects, project }: ProjectProps) => {
   const [isNavbarResponsive, setIsNavbarResponsive] = useState<Boolean>(false);
   return (
     <Grid container>
-      <Canvas />
+      {/* <Canvas /> */}
       <Grid
         item
         //todo responsive navbar
-        xs={3}
+        xs={isNavbarResponsive ? 1 : 3}
         className="relative z-50 min-h-screen transition-all duration-500 "
       >
         <ProjectsNavbar
@@ -38,8 +39,16 @@ const Project = ({ projects, project }: ProjectProps) => {
           isNavbarResponsive={isNavbarResponsive}
         />
       </Grid>
-      <Grid item xs={9} className="relative z-50 min-h-screen  ">
+      <Grid
+        item
+        xs={isNavbarResponsive ? 11 : 9}
+        className="relative z-50 min-h-screen  "
+      >
         <ProjectDetail project={project} />
+        <button
+          className={`absolute top-1/2 z-50 ${isNavbarResponsive ? "-left-24": " left-0"}`}
+          onClick={() => setIsNavbarResponsive(!isNavbarResponsive)}
+        >{isNavbarResponsive ? <OpenWith /> : <CloseRounded />}</button>
       </Grid>
     </Grid>
   );

@@ -37,7 +37,7 @@ const ProjectDetail = ({ project }: ProjectDetailProps) => {
             </button>
           </div>
         </div>
-        <div className="relative mt-3 h-72 w-full overflow-hidden rounded-lg sm:w-10/12 md:mt-0 md:w-5/12">
+        <div className="relative mt-3 aspect-square h-72 w-full overflow-hidden rounded-lg sm:w-10/12 md:mt-0 md:w-5/12">
           <Image src={project.cover.url} alt={project.name} layout="fill" />
         </div>
       </div>
