@@ -8,6 +8,8 @@ import ProjectDetail from "src/components/ProjectDetail";
 import ProjectsNavbar from "src/components/ProjectsNavbar";
 import { GET_ALL_PROJECTS, GET_PROJECT_INFO } from "src/graphQl/queries";
 import type { Project } from "src/interfaces/interface";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+
 export interface Projects {
   projects: Project[];
 }
@@ -46,9 +48,17 @@ const Project = ({ projects, project }: ProjectProps) => {
       >
         <ProjectDetail project={project} />
         <button
-          className={`absolute top-1/2 z-50 ${isNavbarResponsive ? "-left-24": " left-0"}`}
+          className={`absolute top-3/4  z-50 rounded-tr-full rounded-br-full bg-gray-800 p-5 text-white shadow-sm  shadow-gray-700 transition-all duration-500 ${
+            isNavbarResponsive ? "-left-28" : " left-0"
+          }`}
           onClick={() => setIsNavbarResponsive(!isNavbarResponsive)}
-        >{isNavbarResponsive ? <OpenWith /> : <CloseRounded />}</button>
+        >
+          <ArrowBackIosNewIcon
+            className={`${
+              isNavbarResponsive && "rotate-180"
+            } transition-all duration-500`}
+          />
+        </button>
       </Grid>
     </Grid>
   );
