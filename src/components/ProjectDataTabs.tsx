@@ -23,7 +23,9 @@ const ProjectDataTabs = ({ feature, technologies }: ProjectDataTabsProps) => {
         <button
           onClick={() => setTab("feature")}
           className={`rounded-md px-2 py-1  text-lg font-medium transition-all duration-200  hover:bg-black/30 hover:text-teal-200 md:px-4 md:py-2 ${
-            tab === "feature" ? "bg-white/70 text-gray-900" : "bg-neutral-900/50"
+            tab === "feature"
+              ? "bg-white/70 text-gray-900"
+              : "bg-neutral-900/50"
           }`}
         >
           Feature

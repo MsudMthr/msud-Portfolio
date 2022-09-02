@@ -33,12 +33,16 @@ const Projects = ({ projects }: Projects) => {
         <Grid item xs={isNavbarResponsive ? 11 : 9} className="relative z-50">
           <h1>this is content</h1>
           <button
-            className={`absolute transition-all duration-500 top-1/2 z-50 bg-gray-800 shadow-sm text-white shadow-gray-700  rounded-tr-full rounded-br-full p-5 ${
-              isNavbarResponsive ? "-left-28" : " left-0"
+            className={`absolute  top-3/4  z-50 rounded-tr-full rounded-br-full bg-gray-800 p-5 text-white shadow-sm  shadow-gray-700 transition-all duration-500 ${
+              isNavbarResponsive ? "-left-12 md:-left-28" : " left-0"
             }`}
             onClick={() => setIsNavbarResponsive(!isNavbarResponsive)}
           >
-           <ArrowBackIosNewIcon className={`${isNavbarResponsive && "rotate-180"} transition-all duration-500`} />
+            <ArrowBackIosNewIcon
+              className={`${
+                isNavbarResponsive && "rotate-180"
+              } transition-all duration-500`}
+            />
           </button>
         </Grid>
       </Grid>

@@ -48,8 +48,8 @@ const Project = ({ projects, project }: ProjectProps) => {
       >
         <ProjectDetail project={project} />
         <button
-          className={`absolute top-3/4  z-50 rounded-tr-full rounded-br-full bg-gray-800 p-5 text-white shadow-sm  shadow-gray-700 transition-all duration-500 ${
-            isNavbarResponsive ? "-left-28" : " left-0"
+          className={`absolute  top-3/4  z-50 rounded-tr-full rounded-br-full bg-gray-800 p-5 text-white shadow-sm  shadow-gray-700 transition-all duration-500 ${
+            isNavbarResponsive ? "md:-left-28 -left-12" : " left-0"
           }`}
           onClick={() => setIsNavbarResponsive(!isNavbarResponsive)}
         >
